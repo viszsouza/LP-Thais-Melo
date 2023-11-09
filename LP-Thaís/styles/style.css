@@ -121,9 +121,6 @@ section#imagem img {
     display: none;
 }
 
-.flex-container-2{
-    
-}
 
 /* Definindo position absolute para que os textos fiquem à frente da imagem */
 div#textos-imagem {
@@ -215,7 +212,11 @@ div#container-sobremim {
     align-items: center;
 }
 
-
+.flex-container-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* estilizando botão ler mais */
 .btn-lermais {
@@ -838,6 +839,10 @@ button#submit:focus {
     transition: 0.3s ease-in-out;
 }
 
+    .flex-container-2{
+        display: block;
+    }
+
     .secao {
         margin: 0 auto;
         max-width: 400px;
@@ -868,9 +873,10 @@ button#submit:focus {
         justify-content: flex-start;
     }
 
+
     .btn-lermais {
         font-size: .8em;
-        width: 65px;
+        width: 190px;
         height: 35px;
     }
 
