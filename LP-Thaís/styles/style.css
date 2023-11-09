@@ -1,0 +1,1149 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+/*Fonte Forum*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/*Fonte Open Sans*/
+
+/* Declaração de variáveis para as fontes e cores da página */
+:root {
+    --preto-acinzentado: #121211;
+    --laranja: #EB5E28;
+    --dourado: rgb(246, 191, 115);
+    --forum: 'Forum', cursive;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+/* Tirando as estilizações padrões que os navegadores fazem, colocando a fonte padrão do projeto, colocando o comportamento suave ao clicar em um link  */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: var(--open-sans);
+    scroll-behavior: smooth;
+}
+
+/* corpo do html */
+body {
+    background-color: var(--preto-acinzentado);
+}
+
+/*Criando uma classe para evitar a repetição dessas três propriedades*/
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para impedir de selecionar imagens e arrastá-las pela tela */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Estilização da barra de navegação do site */
+nav#navbar {
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    padding: 15px 15px 15px 15px;
+}
+
+/* Estilização para o link com o nome da cliente */
+nav#navbar a#titulo-menu {
+    color: white;
+    font-family: var(--forum);
+    font-size: 1.3em;
+}
+
+/* Estilização dos elementos da página que encontram-se no menu */
+div#elementos {
+    display: flex;
+    gap: 20px;
+    font-family: var(--open-sans);
+    align-items: center;
+    font-weight: bold;
+}
+
+i#burguer {
+    display: block;
+    cursor: pointer;
+}
+
+/* Estilização dos links da página que encontram-se no menu */
+div#elementos a {
+    color: white;
+    font-size: .9em;
+}
+
+/* Estilização dos links da página que encontram-se no menu [ao passar o mouse] */
+div#elementos a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização do botão do menu */
+div#elementos button#btn-contato {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 8px 10px 8px 10px;
+    border: none;
+    font-family: var(--open-sans);
+    font-size: .9em;
+    font-weight: bold;
+    margin: auto;
+    color: black;
+    background-image: linear-gradient( to right, rgb(251, 177, 74), var(--dourado)) ;
+    box-shadow: 0px 2px 34px 7px rgba(0,0,0,0.81);
+-webkit-box-shadow: 0px 2px 34px 7px rgba(0,0,0,0.81);
+-moz-box-shadow: 0px 2px 34px 7px rgba(0,0,0,0.81);
+}
+
+/* Estilização do botão do menu [ao passar o mouse por cima] */
+div#elementos button#btn-contato:hover {
+    scale: 1.05;
+    transition: all 150ms ease-in-out;
+}
+
+/* Estilização da sessão com a imagem de thaís de fundo. */
+section#imagem {
+    position: relative;
+    text-align: center;
+}
+
+/* Estilização da imagem da sessão de fato */
+section#imagem img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.mobile {
+    display: none;
+}
+
+.flex-container-2{
+    
+}
+
+/* Definindo position absolute para que os textos fiquem à frente da imagem */
+div#textos-imagem {
+    width: 1000px;
+    position: absolute;
+    left: 10px;
+    top: 120px;
+}
+
+/* Estilização da frase motivacional */
+div#textos-imagem h1 {
+    color: var(--dourado);
+    font-size: 3em;
+    font-weight: 700px;
+}
+
+/* Delimitação da caixa que contém o paragráfo que fica abaixo da frase motivacional */
+div#caixa-paragrafo {
+    width: 390px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* Estilização do parágrafo abaixo da frase motivacional de fato */
+div#textos-imagem p {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.600);
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+#botao{
+    background-image: linear-gradient( to right, rgb(251, 177, 74), var(--dourado)) ;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000000;
+    box-shadow: 0px 2px 34px 7px rgba(0,0,0,0.81);
+-webkit-box-shadow: 0px 2px 34px 7px rgba(0,0,0,0.81);
+-moz-box-shadow: 0px 2px 34px 7px rgba(0,0,0,0.81);
+    transition: 0.3s ease-in-out;
+}
+
+#botao:hover{
+    padding: 12px;
+}
+
+/*Classe que envolve tanto o sobre mim quanto o sobre o projeto*/
+.container {
+    gap: 81px;
+    color: white;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    margin: 100px;
+}
+
+/* SOBRE MIM */
+/* Div que estiliza a imagem e e texto */
+div#container-sobremim {
+    justify-content: flex-start;
+}
+
+/* Mexendo no h2 */
+.texto h2 {
+    font-size: 2.2em;
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+/* mexendo nos paragrafos */
+.texto {
+    display: flex;
+    font-size: 1em;
+    flex-direction: column;
+    width: 400px;
+}
+
+/* tamanho da imagem */
+.imagem img {
+    width: 460px;
+    border-radius: 20px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* estilizando botão ler mais */
+.btn-lermais {
+    width: 170px;
+    height: 40px;
+    background-image: linear-gradient( to right, #ffffff, #d6d6d6) ;
+
+    background-color: #ebebeb;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+
+/* hover do botão ler mais */
+.btn-lermais:hover {
+    transition: all 150ms ease-in-out;
+    font-size: 0.72em;
+}
+
+
+/* Ínicio SOBRE PROJETO*/
+/* Section que vai está a imagem e o texo */
+div#sobre-a-mentoria {
+    justify-content: space-between;
+}
+
+/* Estilização da seção de depoimentos */
+section#depoimentos-secao {
+    position: relative;
+    padding: 100px 0;
+    margin: 0 auto;
+}
+
+/* Estilização dos botôes do carousel */
+#depoimentos-secao .carousel-button {
+    position: absolute;
+    top: calc(50% - 18px);
+
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    background-color: rgba(200, 200, 200, .5);
+    color: rgba(0, 0, 0, .5);
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    transition: all 150ms ease-in-out;
+}
+
+#depoimentos-secao .carousel-button:hover {
+    top: calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+    background-color: rgba(200, 200, 200, .9);
+    color: var(--preto);
+    font-size: 35px;
+}
+
+/* Posicionamento dos botões do carousel */
+#depoimentos-secao #anterior {
+    left: 5%;
+}
+
+#depoimentos-secao #proximo {
+    right: 5%;
+}
+
+/* Estilização da div onde estarão os depoimentos*/
+#depoimentos {
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+/* Estilização dos cards de depoimento */
+.depoimento {
+    flex-shrink: none;
+    flex-grow: none;
+    scroll-behavior: smooth;
+    padding: 30px;
+    min-height: 360px;
+    min-width: 320px;
+    border-radius: 10px;
+}
+
+/* Colorização dos cards de depoimento */
+.depoimento:nth-child(3n + 1) {
+    background-color: #F6BF73;
+}
+
+.depoimento:nth-child(3n + 2) {
+    background-color: #EBD2AC;
+}
+
+.depoimento:nth-child(3n + 3) {
+    background-color: #FCF4DC;
+}
+
+/* Perfil da pessoa que depôs */
+.perfil-depoimento {
+    margin-bottom: 31px;
+    display: grid;
+    grid-template-rows: 29px 21px;
+    grid-template-columns: 50px 215px;
+    column-gap: 15px;
+}
+
+/* Imagem da pessoa que depôs */
+.imagem-depoimento {
+    grid-row: 1 / 3;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/* Nome da pessoa que depôs */
+.nome-depoimento {
+    color: #001122;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Instagram da pessoa que depôs */
+.instagram-depoimento {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Texto do depoimento */
+.comentario-depoimento {
+    color: #666666;
+    font-size: 16px;
+    font-weight: 500;
+
+    /* Código para que o texto corte na 8a linha e termine com reticências*/
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* estilização do texto que a cliente fez sobre ela mesma */
+section#sobre-mim-texto-container {
+    padding: 20px;
+    background-color: white;
+    flex-direction: row;
+    text-align: center;
+}
+
+/* estilização da sessão que possui o texto do sobre mim */
+section.padrao-textos {
+    max-width: 770px;
+    width: 100%;
+}
+
+/* estilização do título do texto sobre mim */
+section.padrao-textos h1 {
+    margin: 60px 0 30px 0;
+    font-size: 2.3rem;
+    color: #001122;
+}
+
+/* estilização dos paragráfos do texto da sessão sobre mim */
+#sobre-mim-p {
+    color: #888888;
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: -0.5;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#sobre-mim-p-2 {
+    color: #888888;
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: -0.5;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+#sobre-mim-b {
+    font-size: 1.5em;
+    line-height: 1.5;
+    letter-spacing: -0.5;
+    font-weight: 900;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#botao-2{
+    margin-top: 100px;
+    background-image: linear-gradient( to right, rgb(251, 177, 74), var(--dourado)) ;
+    padding: 10px;
+    border-radius: 10px;
+    color: #121211;
+    transition: 0.3s ease-in-out;
+}
+
+#botao-2:hover{
+    padding: 12px;
+}
+
+/* estilização do container da imagem do sobre mim*/
+div#imagem-container{
+    margin-top: 30px;
+    font-family: var(--open-sans);
+}
+
+/* estilização da imagem do sobre mim de fato */
+div#imagem-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*Estilização dos elementos do sobre mim */
+div#elementos-perfil {
+    margin-left: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+/*Estilização do nome da cliente*/
+div#elementos-perfil span#nome-thais {
+    color: #001122;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* estilização do @ do instagram da cliente */
+span.margin-bottom-zero {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Sobre o Projeto Texto */
+section#sobre-a-mentoria-texto {
+    color: #c4c4c4;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 80px;
+    min-height: 470px;
+}
+
+/* estilizando titulo */
+section#sobre-a-mentoria-texto h2 {
+    color: white;
+    padding: 40px;
+    font-size: 2.3rem;
+}
+
+/* colocando espaço no paragrafo de cima */
+section#sobre-a-mentoria-texto #p2 {
+    margin-top: 22px;
+}
+
+/* tamanho dos paragrafos */
+section#sobre-a-mentoria-texto p {
+    font-size: 1.1em;
+}
+
+/* tamanho da caixa de todos os textos */
+section#sobre-a-mentoria-texto div#paragrafos-sobre-projeto {
+    max-width: 720px;
+    margin: auto;
+}
+
+/*rodape*/
+.rodape {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 100px 10px 100px;
+}
+
+/*codigo para separar a primeira parte do rodape*/
+.separar1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.separar1 span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*codigo para ajustar a parte do contato do rodape */
+div.contato {
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 17px;
+    padding: 10px 0px 10px 0px;
+    min-width: 12vw;
+}
+
+div.contato p#telefone-contato {
+    width: 150px;
+}
+
+
+/*codigo para ajustar a parte da localização do rodape */
+div.localizacao {
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 0vw;
+    font-size: 17px;
+    padding: 10px 0px 10px 0px;
+    min-width: 25vw;
+}
+
+/*linha cinza que divide o rodape*/
+.linha-cinza {
+    border-bottom: 1px solid #ccc;
+}
+
+/*codigo para separar a segunda parte do rodape*/
+.separar2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* codigo para retirar a cor azul do link */
+.icones-sociais a {
+    color: inherit;
+}
+
+/* codigo para separar os icones do intagram e do linkedin */
+.icones-sociais a:nth-child(1) {
+    margin-right: 5px;
+}
+
+/* MODAL */
+/*Animação do modal*/
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+/*Animação do modal*/
+
+#fade,
+.modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*Escondendo modal*/
+
+.modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+/* Conteiner do Modal */
+.modal {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 50;
+    width: 433px;
+    margin: 0 auto;
+    height: 730px;
+}
+
+
+/* Titulo do Modal */
+.modal h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: -70px;
+    margin-top: 100px;
+    line-height: 1.2;
+    transform: scale(.7);
+    text-align: center;
+}
+
+/* Container do Formulario */
+.form {
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+    transform: scale(.7);
+}
+
+/* Tamanho dos inputs do Formulario */
+.form label,
+.form input,
+.form textarea,
+.form button {
+    display: block;
+    width: 100%;
+}
+
+/* Tamanho dos textos do Formulario */
+.form label,
+div.termos label {
+    color: #fff;
+    line-height: 1;
+    margin-bottom: .5rem;
+
+}
+
+/* Tamanhos dos inputs do Formulario 2.0 */
+.form input,
+.form textarea {
+    font: inherit;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border-color, box-shadow 0.2s;
+}
+
+/* Tamanho do textarea */
+.form textarea {
+    min-height: 13rem;
+    resize: none;
+}
+
+/* Bordas apos passar o muse por cima dos inputs */
+.form input:hover,
+.form input:focus,
+.form textarea:hover,
+.form textarea:focus,
+div.termos input:hover,
+div.termos input:focus {
+    outline: none;
+    border-color: #F4AC48;
+    box-shadow: 0 0 0 3px #FFD599;
+}
+
+/* Termos do Modal */
+.termos {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilização da caixa do checkbox */
+div#caixa-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* input do checkbox do Modal */
+input#checkbox {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* etiqueta do input do checkbox */
+label[for="checkbox"] {
+    margin-top: 8px;
+    color: white;
+    font-size: 1em;
+}
+
+/* estilização do link que contém a política de privacidade */
+a#politica {
+    text-decoration: none;
+    color: var(--dourado);
+}
+
+/* reCAPTCHA */
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+}
+
+/*Estilização da seção que contém a caixa do recaptcha*/
+section#recaptcha {
+    margin-left: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Estilizacao do botao de enviar */
+button#submit {
+    display: block;
+    margin-left: 3px;
+    padding: 10px;
+    background: #ecab51;
+    color: #fff;
+    font: inherit;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 303.1px;
+}
+
+/* Animação do botão apos passar o mouse */
+button#submit:hover,
+button#submit:focus {
+    outline: none;
+    background: #ffb54d;
+}
+
+/* Botao de fechar o modal "X" */
+.modal__close {
+    position: absolute;
+    scale: 3.5;
+    top: -80px;
+    left: 480px;
+    color: red;
+    text-decoration: none;
+}
+
+/* Posicao do reCAPTCHA */
+.confirmacoes {
+    margin-top: -75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Media query para ajustar as propriedades vistas anteriormente para celular*/
+@media screen and (max-width: 620px) {
+
+    :root {
+        font-size: 14px;
+    }
+
+    #textos-imagem {
+        text-align: center;
+        max-width: 300px;
+    }
+
+    div#elementos {
+        gap: 10px;
+    }
+
+    #caixa-paragrafo {
+        max-width: 300px;
+    }
+
+    div#elementos a {
+        font-size: 1em;
+    }
+
+    div#elementos button#btn-contato {
+        font-size: .9em;
+    }
+
+    div#textos-imagem {
+    width: 1000px;
+    position: absolute;
+    left: 10px;
+    top: 25px;
+}
+
+    div#textos-imagem h1 {
+        font-size: 1em;
+        padding: 0 5px;
+    }
+
+    div#textos-imagem p {
+        font-size: 1.2em;
+        max-width: 300px;
+        padding: 0 10px;
+    }
+
+    #botao{
+    font-size: 0.6em;
+    background-color: #ecab51;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ebebeb;
+    box-shadow: 11px 10px 32px 5px rgba(0,0,0,0.84);
+-webkit-box-shadow: 11px 10px 32px 5px rgba(0,0,0,0.84);
+-moz-box-shadow: 11px 10px 32px 5px rgba(0,0,0,0.84);
+    transition: 0.3s ease-in-out;
+}
+
+    .secao {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        margin: 50px;
+        padding: 10px;
+        gap: 30px;
+    }
+
+    .texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .texto {
+        max-width: 200px;
+        font-size: 1rem;
+    }
+
+    .imagem img {
+        max-width: 180px;
+    }
+
+    div#sobre-a-mentoria {
+        justify-content: flex-start;
+    }
+
+    .btn-lermais {
+        font-size: .8em;
+        width: 65px;
+        height: 35px;
+    }
+
+    .btn-lermais:hover {
+        font-size: .8em;
+    }
+
+    section#depoimentos-secao {
+        margin-bottom: 30px;
+        padding: 20px 10px 20px 10px;
+        max-width: 350px;
+    }
+
+    #depoimentos-secao button#anterior {
+        width: 50px;
+        height: 50px;
+        left: 0;
+    }
+
+    #depoimentos-secao button#proximo {
+        width: 50px;
+        height: 50px;
+        right: 0;
+    }
+
+    #depoimentos-secao div#depoimentos {
+        max-width: 300px;
+        gap: 57.5px;
+    }
+
+    .depoimento {
+        min-width: 100%;
+        max-width: 300px
+    }
+
+    div.contato,
+    div.localizacao {
+        font-size: .9em;
+    }
+
+    .rodape {
+        padding: 50px 20px 10px 20px;
+    }
+
+    div.separar2 p {
+        font-size: .9em;
+    }
+
+    .modal {
+        width: 350px;
+        margin: auto;
+    }
+
+    a.modal__close {
+        text-align: center;
+        position: absolute;
+        left: 320px;
+        top: -150px;
+        scale: 4;
+    }
+
+    button#submit {
+        width: 220px;
+        margin: auto;
+    }
+
+    section#recaptcha {
+        margin-bottom: 2px;
+    }
+
+    div.g-recaptcha {
+        margin-left: 2px;
+        scale: 0.8;
+    }
+
+    div.termos {
+        text-align: center;
+    }
+
+    label[for="checkbox"] {
+        font-size: .92em;
+    }
+}
+
+/* Media query para ajustar as propriedades vistas anteriormente para telas intermediárias*/
+@media screen and (min-width: 621px) and (max-width: 750px) {
+    /*601PX */
+
+    div#textos-imagem h1 {
+        font-size: 1.9em;
+        padding: 0 10px;
+    }
+
+    #caixa-paragrafo {
+        max-width: 500px;
+        font-size: .9em;
+    }
+
+    .container img {
+        max-width: 210px;
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        min-height: 400px;
+        max-width: 400px;
+        gap: 30px;
+    }
+
+    .secao {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 500px;
+    }
+
+    #depoimentos-secao {
+        min-width: 600px;
+        max-width: 600px;
+        padding: 0;
+    }
+
+    #depoimentos {
+        width: 500px;
+    }
+
+    .depoimento {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .nome-depoimento {
+        font-size: 16px;
+    }
+
+    .texto h2 {
+        font-size: 2.1rem;
+        min-width: 200px;
+    }
+
+    #sobre-a-mentoria {
+        justify-content: space-between;
+    }
+
+    #sobre-a-mentoria .texto {
+        min-width: 200px;
+    }
+
+    .texto {
+        min-width: 190px;
+        max-width: 190px;
+        font-size: 1rem;
+    }
+
+    .texto p {
+        max-width: 200px;
+    }
+}
+
+/* Media query para ajustar as propriedades vistas anteriormente para tablets*/
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+    div#textos-imagem h1 {
+        font-size: 2.1em;
+        padding: 0 10px;
+    }
+
+    #caixa-paragrafo {
+        max-width: 500px;
+        font-size: .9em;
+    }
+
+    .container img {
+        max-width: 310px;
+    }
+
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        min-height: 400px;
+        min-width: 600px;
+        max-width: 600px;
+        gap: 50px;
+    }
+
+    .secao {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 700px;
+    }
+
+    section#depoimentos-secao {
+        padding: 50px 0;
+        min-width: 72px;
+        max-width: 720px;
+    }
+
+    #depoimentos-secao button#anterior {
+        left: 0;
+    }
+
+    #depoimentos-secao button#proximo {
+        right: 0;
+    }
+
+    #depoimentos {
+        min-width: 700px;
+        max-width: 700px;
+        gap: 20px;
+    }
+
+    .perfil-depoimento {
+        grid-template-rows: 17px 16px;
+        gap: 7px;
+    }
+
+    .depoimento {
+        min-width: 220px;
+        max-width: 220px;
+    }
+
+    .nome-depoimento {
+        font-size: 15px;
+    }
+
+    .texto h2 {
+        font-size: 2.3rem;
+        min-width: 200px;
+    }
+
+    #sobre-a-mentoria {
+        justify-content: center;
+    }
+
+    #sobre-a-mentoria .texto {
+        min-width: 250px;
+    }
+
+    .texto {
+        min-width: 190px;
+        max-width: 419px;
+        font-size: 1rem;
+    }
+
+    .texto p {
+        font-size: 1.2rem;
+        max-width: 250px;
+    }
+
+}
+
+/* Posicao do Loader do Modal */
+div#container-loader {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilizacao do Loader */
+.custom-loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: var(--dourado) #0000;
+    animation: s1 0.5s infinite;
+}
+
+/* Animacao doo Loader */
+@keyframes s1 {
+    to {
+        transform: rotate(.5turn)
+    }
+}

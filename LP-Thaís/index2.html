@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sou Thaís Melo, empreendedora. Hoje consigo ter clareza do meu propósito profissional e quero ajudar outras pessoas a encontrarem o seu. Vamos nessa?">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/c687b2a461.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="./scripts/script.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Thaís Melo</title>
+</head>
+<body>
+    <header id="cabecalho"> <!--Cabeçalho-->
+        <nav id="navbar" class="flex-container"> <!-- barra de navegação do site -->
+            <a href="https://www.instagram.com/thaismelopd/" id="titulo-menu" target="_blank">
+                <!--Link para o instagram da cliente-->
+                <h1><abbr title="Logo">Thaís Melo</abbr></h1>
+            </a>
+            <div id="elementos"> <!-- Partes da página-->
+                <a href="#sobre-mim-texto" id="sobreElemento">Sobre</a>
+                <!--Botão para abrir o modal de contato-->
+                <button type="button" id="btn-contato">Contato</button>
+            </div>
+        </nav>
+
+        <section id="imagem" class="flex-container-2">
+            <!--Sessão aonde será colocada a imagem de fundo de Thaís explicando-->
+            <img src="./images/imagem-principal-desktop.jpeg" class="desktop" alt="Foto de Thaís falando numa reunião">
+            <img src="./images/imagem-principal-mobile.jpeg" class="mobile" alt="Foto de Thaís falando numa reunião">
+            <div id="textos-imagem"> <!--Div para os textos que ficam à frente da imagem-->
+                <h1>Descubra como construir um estilo de vida com significado através de bons hábitos, rotina e o compromisso com você mesmo.</h1>
+
+                <div id="caixa-paragrafo"> <!--Div para delimitar o espaço ocupado pelo parágrafo-->
+                    <p><a href="https://chat.whatsapp.com/E0DEaYUSabNHYbYFOPzwwG" target="_blank" id="botao" >GARANTIR A MINHA VAGA</a></p>
+                </div>
+            </div>
+        </section>
+    </header> <!--Fim do cabeçalho-->
+
+    <!-- Inicio do sobre mim -->
+    <section class="flex-container secao">
+        <!-- Container maior que guarda texto e imagem -->
+        <div id="container-sobremim" class="flex-container container">
+            <div class="imagem">
+                <img src="images/imagem-thais.jpg" alt="Foto de Thaís sorrindo">
+            </div>
+            <div class="texto">
+                <h2>Já imaginou ter uma rotina capaz de sustentar hábitos saudáveis e dentro das suas condições de vida?</h2>
+                <p>Eu sei que pode ser difícil, é um tanto desafiador mudar velhos comportamentos mas, eu to aqui pra te ajudar, você não precisa fazer isso sozinho.</p>
+                <div class="botoes">
+                    <div class="espaço">
+                        <a href="#sobre-mim-texto" style="color: black"><button class="btn-lermais"> Saiba Mais</button></a>
+                        <a href="https://chat.whatsapp.com/E0DEaYUSabNHYbYFOPzwwG" target="_blank" style="color: black"><button class="btn-lermais"> Garantir a minha vaga</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="depoimentos-secao" class="flex-container secao"> <!-- Sessão de depoimentos -->
+        <!-- Botões do carousel -->
+        <button id="anterior" class="carousel-button flex-container" type="button">&lt;</button>
+        <button id="proximo" class="carousel-button flex-container" type="button">&gt;</button>
+        <!-- Lista de depoimentos -->
+        <div id="depoimentos">
+            <!-- Item da lista de depoimentos -->
+            <div class="depoimento">
+                <!-- Perfil da pessoa que fez o depoimento -->
+                <div class="perfil-depoimento">
+                    <img class="imagem-depoimento" src="./images/thaynara-rudner-foto.jpg" alt="Foto de perfil de Thaynara Rudner">
+                    <p class="nome-depoimento">Thaynara Rudner</p>
+                    <p class="instagram-depoimento">@thaynararudner</p>
+                </div>
+                <!-- O depoimento -->
+                <p class="comentario-depoimento">Thaís, estou amando ler cada coisa que você deixa aqui.
+                    Enquanto estava lendo, me enxergava automaticamente em cada palavra. Admiro demais tua força
+                    e determinação. E é isso que estou buscando a cada dia.</p>
+            </div>
+            <div class="depoimento">
+                <div class="perfil-depoimento">
+                    <img class="imagem-depoimento" src="images/nilsien-simas-foto.jpg" alt="Foto de perfil de Nilsien Simas">
+                    <p class="nome-depoimento">Nilsien Simas</p>
+                    <p class="instagram-depoimento">@nilsiensimas</p>
+                </div>
+                <p class="comentario-depoimento">Maravilhosa!!! Pode ter certeza que você fez parte da minha
+                    transformação enquanto profissional. Eu sou muito grata! Eu sei que aí tem muito propósito e
+                    carinho ❤️</p>
+            </div>
+            <div class="depoimento">
+                <div class="perfil-depoimento">
+                    <img class="imagem-depoimento" src="images/exter-lira-foto.jpg" alt="Foto de perfil de Ester Lira">
+                    <p class="nome-depoimento">Ester Lira</p>
+                    <p class="instagram-depoimento">@ex.ter.lira</p>
+                </div>
+                <p class="comentario-depoimento">Foi perfeita a palestra!!! Até agora pensando em tudo o que
+                    rolou ontem, obrigada por compartilhar conosco a sua caminhada ❤️</p>
+            </div>
+            <div class="depoimento">
+                <div class="perfil-depoimento">
+                    <img class="imagem-depoimento" src="./images/adryelle-franca-foto.jpg" alt="Foto de perfil de Adryelle Maria">
+                    <p class="nome-depoimento">Adryelle Maria</p>
+                    <p class="instagram-depoimento">@adryellefranca</p>
+                </div>
+                <p class="comentario-depoimento">Pessoa maravilhosa!!!!! Já conhecia por ver ela no insta da
+                    agência mas conhecendo pessoalmente ela é uma fofa!!!!!! Gratidão pela palestra sua
+                    linda!!!!</p>
+            </div>
+            <div class="depoimento">
+                <!-- Perfil da pessoa que fez o depoimento -->
+                <div class="perfil-depoimento">
+                    <img class="imagem-depoimento" src="./images/anna-carvalho-foto.jpg" alt="Foto de perfil de Anna Carvalho">
+                    <p class="nome-depoimento">Anna Carvalho</p>
+                    <p class="instagram-depoimento">@annacarvalh0._</p>
+                </div>
+                <!-- O depoimento -->
+                <p class="comentario-depoimento">Muito incrível sua palestra, me identifiquei em vários momentos. Te desejo sucesso e que você consiga passar o mesmo sentimento de alegria que eu estou sentindo para outras pessoas! Você é incrível! ❤️</p>
+            </div>
+            <div class="depoimento">
+                <div class="perfil-depoimento">
+                    <img class="imagem-depoimento" src="./images/katarina-chagas-foto.jpg" alt="Foto de perfil de Katarina Chagas">
+                    <p class="nome-depoimento">Katarina Chagas</p>
+                    <p class="instagram-depoimento">@katarinachagas11</p>
+                </div>
+                <p class="comentario-depoimento">VOCÊ é GIGANTE, só orgulhoooo parabéns por cada conquista. Que Deus te abençoe ricamente 😍😍😍</p>
+            </div>
+        </div>
+    </section>
+    <!--Texto com o sobre mim completo da cliente.-->
+    <section id="sobre-mim-texto-container" class="flex-container">
+        <!--Texto contendo algumas informações sobre o cliente-->
+        <section id="sobre-mim-texto" class="padrao-textos">
+            <h1>Sobre o Evento</h1>
+            <p id="sobre-mim-p">14 de novembro às 20h  - Fechado no ZOOM </p>
+            <p id="sobre-mim-p">As vagas são limitadas.</p>
+            <p id="sobre-mim-p"> Não será mais uma simples aula que você irá participar, mas o ponto de partida para uma virada de chave!</p>
+            <p id="sobre-mim-p">Será 1h de troca de experiências onde compartilharei as escolhas que fiz para mudar meu contexto de vida e alcançar meus objetivos </p>
+            <b id="#sobre-mim-b">Quem deve participar dessa reunião?</b> 
+                <p id="sobre-mim-p">- Você que busca construir bons hábitos</p>
+                <p id="sobre-mim-p">- Você que deseja mudar a sua rotina </p>
+                <p id="sobre-mim-p">- Você que busca sentido de vida e quer descobrir seu propósito</p>
+                <p id="sobre-mim-p">- Você que busca autoconhecimento </p>
+            <b id="#sobre-mim-b">Exclusivo para quem vai participar do encontro</b>
+            <p id="sobre-mim-p">Ferramenta de autogestão</p>
+            <p id="sobre-mim-p">Conteúdo ao vivo e fechado com Thaís</p>
+            <p id="sobre-mim-p-2">Sorteio de 1h de mentoria exclusiva </p>
+            <a href="https://chat.whatsapp.com/E0DEaYUSabNHYbYFOPzwwG" target="_blank" id="botao-2" >GARANTIR A MINHA VAGA</a>
+            <!--Informações sobre o instagram da cliente-->
+            <div id="imagem-container" class="flex-container">
+                <a href="https://www.instagram.com/thaismelopd/" target="_blank"><abbr title="@thaismelopd">
+                    <img src="images/foto-perfil.png"
+                            alt="Foto de perfil do instagram de Thaís" id="foto-perfil-insta">
+                </abbr></a>
+                <div id="elementos-perfil">
+                    <span class="margin-bottom-zero" id="nome-thais">Thaís Melo</span>
+                    <a href="https://www.instagram.com/thaismelopd/" target="_blank"><span
+                            class="margin-bottom-zero"><abbr title="@thaismelopd">@thaismelopd</abbr></span></a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="sobre-a-mentoria-texto">
+        <h2>Quem é Thaís Melo?</h2>
+        <!-- div que junta todos os paragrafos -->
+        <div id="paragrafos-sobre-projeto" class="padrao-textos">
+            <p>Diretora de operação do Grupo PD, professora, mentora e palestrante nas áreas de Marketing, Desenvolvimento pessoal, Comportamento humano e Coaching.</p>
+            <p id="p2">Meu principal objetivo é ajudar pessoas a encontrarem sentido em suas carreiras através do
+                autoconhecimento. Faço isso pois o caminho das pedras eu já trilhei. Me coloco como mentora desse
+                processo pra que vocês não tenham que passar o tempo que passei pra descobrir o que realmente
+                querem.</p>
+            <br>
+            <p>"A decisão de mudar, muda tudo! Faça o que ninguém pode fazer por você e comece agora."</p>
+        </div>
+    </section>
+    <footer class="rodape">
+        <!-- Criação da div 'separar1' para separar a classe 'contato e localização' -->
+        <div class="separar1">
+            <div class="contato">
+                <span><strong>Contato</strong></span>
+                <p>thaismelopd@gmail.com </p>
+                <p id="telefone-contato">(81) 97909-4816 </p>
+            </div>
+            <div class="localizacao">
+                <span><strong>Localização</strong></span>
+                <p>Recife, Rua Antônio Novais, graças, 86.</p>
+                <p>52050-280</p>
+            </div>
+        </div><br>
+        <!-- Criação da classe linha-cinza, para criação de uma linha para separar o rodade -->
+        <div class="linha-cinza"></div><br>
+        <!-- Criação da classe 'separar2', para separar a segunda parte do rodape -->
+        <div class="separar2">
+            <p>&copy; 2023 PD-Tech, Inc.</p>
+            <ul class="icones-sociais">
+                <a href="https://www.instagram.com/thaismelopd/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/thaismelopd/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </ul>
+        </div>
+    </footer>
+    <div id="fade" class="hide"></div>
+    <div id="btn-contato" class="modal hide">
+
+        <!-- Conteudo do Modal -->
+
+
+            <h1>Entre em Contato</h1>
+            
+            <!-- Modal FormSubmit -->
+            
+            <form action="https://formsubmit.co/28ad27bdde038784068c7653828fc7f1" method="POST" id="demo-modal" class="form"
+                onsubmit="return submitUserForm();">
+                <!-- Input do Nome -->
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Seu nome" required>
+
+                <!-- Input do E-mail -->
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Ex: seuemail@gmail.com" required>
+
+                <!-- Input do Contato -->
+                <label for="contato">Telefone</label>
+                <input type="text" name="contato" id="contato" placeholder="Ex: 81976349589" required pattern="^\d{11}$" title="Faça segundo o exemplo: 81976349589" minlength="11" maxlength="11">
+                
+                <!-- Input do Mensagem -->
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem" required></textarea>
+                                        
+                <!--X para fechar modal-->
+                <a href="#" id="X" class="modal__close" width="50px">&times;</a>
+                
+                <!-- Elementos do FormSubmit -->
+
+                <!--assunto que aparece quando o email é enviado-->
+                <input type="hidden" name="_subject" value="Nova Mensagem do site!">
+                
+                <!--Escolha da template de tabela oferecida pelo form submit-->
+                <input type="hidden" name="_template" value="table">
+                
+                <!--Tirando o captcha feito pelo form submit-->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!--Ao enviar o formulário, enviar de volta para a página principal-->
+                <input type="hidden" name="_next" value="https://thaismelopd.com/">
+                
+                <!-- Checkbox para termos e condições -->
+                <div class="termos">
+                    <div id="caixa-checkbox">
+                        <input type="checkbox" name="checkbox" class="checkbox" id="checkbox" required>
+                        <label for="checkbox">Concordo e aceito os <a href="politica-privacidade/privacidade.html" id="politica" target="_blank">Termos e Condições</a></label> 
+                    </div>
+                </div>
+                
+            </form>
+
+            <!-- reCAPTCHA -->
+            <div class="confirmacoes">
+                <section id="recaptcha">
+                    <div class="g-recaptcha" data-sitekey="6Ld1b1YmAAAAAFrE-_Js9AxYf4TdFhJq9cntbO2V"
+                    data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div>
+                </section>
+                
+                <!-- Botão para enviar dados -->
+                <button type="submit"
+                form="demo-modal" name="submit" id="submit" value="Submit">Enviar</button>
+            </div>
+        
+        <!-- Loader do Modal -->
+        <div id="container-loader">
+            <div class="custom-loader"></div>
+        </div>
+    </div>
+</body>
+</html>
